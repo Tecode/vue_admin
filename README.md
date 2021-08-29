@@ -26,40 +26,44 @@ npm start
 ## 说明
 
 - 启动项目以后直接进入页面不需要登录,由于没有api无法登录
-- 直接输入[http://localhost:8088/home](http://localhost:8088/home)访问首页
+- 直接输入[http://localhost:8088/](http://localhost:8088/)访问首页
 
 ```bash
 # 路由列表
-      { path: '/', component: Login },
       { path: '/home', component: Home },
       { path: '/user_list/:page(\\d+)?', component: UserList },
       { path: '/article_list/:page(\\d+)?', component: ArticleList },
       { path: '/message/:page(\\d+)?', component: Message },
       { path: '/update_log/:page(\\d+)?', component: UpdateLog },
-      { path: '/updatelogedite/:page(\\d+)?', component: UpdateLogEdite },
-			{ path: '/articleedit/:id?', component: ArticleEdit },
-      { path: '/home', component: Home },
-      { path: '/user_list/:page(\\d+)?', component: UserList },
-      { path: '/article_list/:page(\\d+)?', component: ArticleList },
-      { path: '/message/:page(\\d+)?', component: Message },
-      { path: '/update_log/:page(\\d+)?', component: UpdateLog },
-      { path: '/updatelogedite/:page(\\d+)?', component: UpdateLogEdite },
-			{ path: '/articleedit/:id?', component: ArticleEdit },
+      { path: '/update_log_edit/:page(\\d+)?', component: UpdateLogEdited },
+      { path: '/article_edit/:id?', component: ArticleEdit },
+      // { path: '/user/:id', component: UserView },
+      { path: '/', redirect: '/home' }
 
 ```
 
 ## 预览图
 
-![image](http://admin.soscoon.com/uploadImages/bbe8ca9b80c2f8266736b95fe63e67d913bf7038.png)
+### 首頁
 
-![image](http://admin.soscoon.com/uploadImages/ff5583da5072c2fd2b45a78973d39d89c1b1d1a7.png)
+<div align="center">
+<img src="./public/image/home.jpg" width=900>
+</div>
 
-![image](http://admin.soscoon.com/uploadImages/ca172f8a5a421895ce1f2bd5f0230c837c94529b.png)
+### 用戶列表
 
-![image](http://admin.soscoon.com/uploadImages/f68f95a87c8c5c4903e6715b8fe9c9c9f133cbe2.png)
+<div align="center">
+<img src="./public/image/user_list.jpg" width=900>
+</div>
 
-![image](http://admin.soscoon.com/uploadImages/375fa2fddef7a250868b0a25c48b590bee83bf38.png)
+### 留言
 
-![image](http://admin.soscoon.com/uploadImages/ad483ec4188d6b7165dccaf4043fc0a11b23e159.png)
+<div align="center">
+<img src="./public/image/message.jpg" width=900>
+</div>
 
-![image](http://admin.soscoon.com/uploadImages/c3d3934c3d7f81eceb6e6b52ff63cf966eeeb2db.png)
+### 更新日志
+
+<div align="center">
+<img src="./public/image/log.jpg" width=900>
+</div>
