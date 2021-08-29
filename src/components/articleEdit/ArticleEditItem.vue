@@ -181,7 +181,7 @@
 			},
 			// 回调函数返回文章列表
 			back: function () {
-				this.$router.push('/articlelist');
+				this.$router.push('/article_list');
 			},
 			...mapMutations({
 				articleInput: 'ARTICLE_INPUT',

@@ -7,26 +7,26 @@ const UpdateLog = r => require.ensure([], () => r(require('../views/UpdateLog.vu
 const Message = r => require.ensure([], () => r(require('../views/Message.vue')));
 const ArticleList = r => require.ensure([], () => r(require('../views/ArticleList.vue')));
 const UserList = r => require.ensure([], () => r(require('../views/UserList.vue')));
-const UpdateLogEdite = r => require.ensure([], () => r(require('../views/UpdateLogEdite.vue')));
+const UpdateLogEdited = r => require.ensure([], () => r(require('../views/UpdateLogEdite.vue')));
 const ArticleEdit = r => require.ensure([], () => r(require('../views/ArticleEdit.vue')));
 
 Vue.use(Router);
 
-export function createRouter () {
+export function createRouter() {
   return new Router({
     mode: 'history',
     scrollBehavior: () => ({ y: 0 }),
     routes: [
-			{ path: '/', component: Login },
+      // { path: '/', component: Login },
       { path: '/home', component: Home },
-      { path: '/userlist/:page(\\d+)?', component: UserList },
-      { path: '/articlelist/:page(\\d+)?', component: ArticleList },
+      { path: '/user_list/:page(\\d+)?', component: UserList },
+      { path: '/article_list/:page(\\d+)?', component: ArticleList },
       { path: '/message/:page(\\d+)?', component: Message },
-      { path: '/updatelog/:page(\\d+)?', component: UpdateLog },
-      { path: '/updatelogedite/:page(\\d+)?', component: UpdateLogEdite },
-			{ path: '/articleedit/:id?', component: ArticleEdit },
+      { path: '/update_log/:page(\\d+)?', component: UpdateLog },
+      { path: '/update_log_edit/:page(\\d+)?', component: UpdateLogEdited },
+      { path: '/article_edit/:id?', component: ArticleEdit },
       // { path: '/user/:id', component: UserView },
-      // { path: '/', redirect: '/top' }
+      { path: '/', redirect: '/home' }
     ]
   })
 }
