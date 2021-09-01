@@ -1,6 +1,6 @@
 ## Vue+Vue-router+Vuex后台管理系统
 - Github项目地址:[https://github.com/Tecode/vue-admin](https://github.com/Tecode/vue-admin)
-- 网站地址: [https://soscoon.com/article/10170](https://soscoon.com/article/10170)
+- 网站地址: [http://vue.soscoon.com/home](http://vue.soscoon.com/home)
 - 欢迎star
 
 ## 安装
