@@ -9,6 +9,7 @@ const ArticleList = r => require.ensure([], () => r(require('../views/ArticleLis
 const UserList = r => require.ensure([], () => r(require('../views/UserList.vue')));
 const UpdateLogEdited = r => require.ensure([], () => r(require('../views/UpdateLogEdite.vue')));
 const ArticleEdit = r => require.ensure([], () => r(require('../views/ArticleEdit.vue')));
+const VNode = r => require.ensure([], () => r(require('../views/VNode.vue')));
 
 Vue.use(Router);
 
@@ -25,6 +26,7 @@ export function createRouter() {
       { path: '/update_log/:page(\\d+)?', component: UpdateLog },
       { path: '/update_log_edit/:page(\\d+)?', component: UpdateLogEdited },
       { path: '/article_edit/:id?', component: ArticleEdit },
+      { path: '/v_node', component: VNode },
       // { path: '/user/:id', component: UserView },
       { path: '/', redirect: '/home' }
     ]
